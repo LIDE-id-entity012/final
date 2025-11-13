@@ -146,6 +146,8 @@ img {
     display: block;
 }
 
+.img-rounded { border-radius: 0.4rem; }
+
 /* Set basic styles for buttons and form elements (before component class definitions) */
 button, input[type="submit"], input[type="reset"] {
     cursor: pointer;
@@ -153,3 +155,90 @@ button, input[type="submit"], input[type="reset"] {
     border: none;
     padding: 0;
 }found
+
+/* ==========================================================================
+   E. Buttons & Form Elements
+   ========================================================================== */
+button,
+input[type="submit"],
+input[type="reset"] {
+    cursor: pointer;
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.4rem;
+    border: 0.1rem solid #0070f3;
+    background-color: #0070f3;
+    color: #fff;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease, border 0.2s ease;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+button:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Form fields: consistent appearance */
+input, textarea, select {
+    font-family: inherit;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    padding: 0.8rem 1rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.4rem;
+    background-color: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #0070f3;
+    box-shadow: 0 0 0.2rem rgba(0, 112, 243, 0.4);
+    outline: none;
+}
+
+/* ==========================================================================
+   F. Accessibility & Focus
+   ========================================================================== */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 0.2rem solid #0070f3;
+    outline-offset: 0.2rem;
+    border-radius: 0.2rem;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 0.2rem solid #0056b3;
+    outline-offset: 0.3rem;
+}
+
+/* ==========================================================================
+   G. Responsive Utilities
+   ========================================================================== */
+/* Flex utilities */
+.flex { display: flex; }
+.flex-center { display: flex; justify-content: center; align-items: center; }
+.flex-column { display: flex; flex-direction: column; }
+
+/* Grid utilities */
+.grid { display: grid; gap: 1.6rem; }
+.col-2 { grid-template-columns: repeat(2, 1fr); }
+.col-3 { grid-template-columns: repeat(3, 1fr); }
+.col-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 768px) {
+    .col-2, .col-3, .col-4 { grid-template-columns: 1fr; }
+}
