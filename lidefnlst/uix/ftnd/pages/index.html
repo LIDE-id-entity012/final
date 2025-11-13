@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIDE - [Page Title Here]</title>
+    <link rel="stylesheet" href="uix/ftnd/sheets/normalize.css"> 
+    <link rel="stylesheet" href="uix/ftnd/sheets/foundation.css">
+	<link rel="stylesheet" href="uix/ftnd/sheets/components.css"> 
+    <link rel="stylesheet" href="uix/ftnd/sheets/pages.css">
+    
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body class="site-body">
+    <div id="site-container" class="layout-wrapper">
+
+        <header id="site-header" class="layout-header">
+            <div class="container container--nav flex-group">
+                <a href="/" class="site-logo">LIDE</a>
+                <nav id="main-nav" class="nav-menu">
+                    <ul>
+                        <li><a href="/company.html" class="nav-link">Company</a></li>
+                        <li><a href="/blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="/products.html" class="nav-link">Products</a></li> 
+                        </ul>
+                </nav>
+                <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+
+        <main id="site-main" class="layout-main">
+            
+            <section class="content-section section--hero">
+                <div class="container">
+                    <h1 class="page-title">Welcome to LIDE</h1>
+                    <p>Brief introduction to LIDE.</p>
+                </div>
+            </section>
+            
+            <section class="content-section section--featured">
+                <div class="container container--grid">
+                    <h2 class="section-heading">Our Focus</h2>
+                    
+                    <div class="grid-item">
+                        </div>
+                    <div class="grid-item">
+                        </div>
+                    </div>
+            </section>
+
+        </main>
+
+        <footer id="site-footer" class="layout-footer">
+            <div class="container container--footer flex-group">
+                <p>&copy; <span id="current-year">2025</span> LIDE. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="/privacy.html" class="footer-link">Privacy</a>
+                    <a href="/terms.html" class="footer-link">Terms</a>
+                </div>
+            </div>
+        </footer>
+
+    </div> 
+
+    <script src="js/main.js" defer></script>
+    <script>
+        // Set the current year dynamically for the copyright notice
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+/**
+ * 01-foundation.css
+ *
+ * Consolidated layer defining:
+ * 1. BASE: Unclassed styles, root settings, typography, and vertical rhythm.
+ * 2. LAYOUT: Primary structural elements (containers, main wrappers, grid foundation).
+ *
+ * NOTE: normalize.css must be loaded BEFORE this file.
+ */
+
+/* ==========================================================================
+   A. Root Settings (Scalability & Consistency)
+   ========================================================================== */
+
+/* Set a system font stack for high performance and native feel. */
+html {
+    /* Sets the root font size to 10px (10/16 = 0.625) for easier REM calculations: 1.6rem = 16px, 2.0rem = 20px, etc. */
+    font-size: 62.5%;
+    /* Standard system font stack (assuming Inter is loaded via link tag) */
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /* Inherit box-sizing to all elements for predictable layouts */
+    box-sizing: border-box;
+}
+
+/* Inherit box-sizing to all elements */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Set default font size and line height on the body */
+body {
+    /* Base font size for body (1.6rem = 16px) */
+    font-size: 1.6rem;
+    /* Standard line height for body text (1.5x the font size) */
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+    /* Remove default margin that normalize/reset might not cover */
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   B. Base Elements (Typography & Readability - Vertical Rhythm)
+   ========================================================================== */
+
+/* Headings: Define scalable sizes and consistent spacing */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    /* Ensure clear vertical spacing above and below headings based on line height */
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    /* Tighter line height for headings for visual punch */
+    line-height: 1.2;
+}
+
+/* Define the type scale using REM units for scalability */
+h1 { font-size: 4.2rem; }
+h2 { font-size: 3.4rem; }
+h3 { font-size: 2.8rem; }
+h4 { font-size: 2.2rem; }
+h5 { font-size: 1.8rem; }
+h6 { font-size: 1.6rem; }
+
+/* Consistent vertical margin for all block elements (Vertical Rhythm) */
+p, ul, ol, blockquote, figure, pre, fieldset, hr {
+    margin-top: 0;
+    margin-bottom: 1.5rem; /* Standard vertical rhythm unit */
+}
+
+/* List adjustments */
+ul, ol {
+    padding-left: 2.5rem; /* Ensure lists have visible indentation */
+}
+
+/* Blockquote styling for distinguishing quotes */
+blockquote {
+    border-left: 0.4rem solid #ccc;
+    padding: 1.5rem 2rem;
+    margin-left: 0;
+    font-style: italic;
+    color: #555;
+    background-color: #f9f9f9;
+    border-radius: 0.4rem;
+}
+
+/* ==========================================================================
+   C. Layout Structure (Primary Responsive Containers)
+   ========================================================================== */
+
+/* Main responsive container (Used with class: l-container) */
+.l-container {
+    width: 100%;
+    /* Add padding to prevent content touching screen edges on mobile */
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Responsive breakpoints for the container */
+@media (min-width: 576px) { .l-container { max-width: 540px; } }
+@media (min-width: 768px) { .l-container { max-width: 720px; } }
+@media (min-width: 992px) { .l-container { max-width: 960px; } }
+@media (min-width: 1200px) { .l-container { max-width: 1140px; } }
+
+/* General Layout Elements (Header, Footer, Main) */
+header, footer {
+    width: 100%;
+    padding: 2rem 0;
+    background-color: #f1f1f1;
+}
+
+header { border-bottom: 0.1rem solid #ddd; }
+footer { border-top: 0.1rem solid #ddd; }
+
+/* ==========================================================================
+   D. Links & Media (Accessibility & Responsiveness)
+   ========================================================================== */
+
+a {
+    color: #0070f3;
+    text-decoration: none; /* No underline by default (visual preference) */
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+/* Clear focus and hover states for accessibility and UX */
+a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #0056b3;
+}
+
+a:focus {
+    outline: 0.2rem solid #0070f3;
+    outline-offset: 0.2rem;
+    border-radius: 0.2rem;
+}
+
+/* Ensure images are responsive and do not overflow their containers */
+img {
+    max-width: 100%;
+    height: auto;
+    /* Vertically align to prevent space under image */
+    vertical-align: middle;
+    border-radius: 0.4rem; /* Soften image edges */
+    display: block;
+}
+
+/* Set basic styles for buttons and form elements (before component class definitions) */
+button, input[type="submit"], input[type="reset"] {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}found
